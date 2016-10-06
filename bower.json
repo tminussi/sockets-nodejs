@@ -1,0 +1,23 @@
+{
+  "name": "sockets",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Thales Minussi <tminussi@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/tminussi/sockets-nodejs",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "socket.io-client": "^1.4.8",
+    "materialize": "^0.97.7"
+  }
+}
