@@ -1,6 +1,8 @@
 var socket = io();
-var name = getQueryVariable('name');
+var name = getQueryVariable('name') || 'Anonymous';
 var room = getQueryVariable('room');
+
+$('.room-title').text(room).append(' room');
 socket.on('connect', function (socket) {
     console.log('Connected to socket.io server');
 });
@@ -26,7 +28,7 @@ function getQueryVariable(variable) {
     for (var i = 0; i < args.length; i++) {
         var pair = args[i].split('=');
         if (decodeURIComponent(pair[0]) == variable) {
-            return decodeURIComponent(pair[1]);
+            return decodeURIComponent(pair[1].replace(/\+/g, ' '));
         }
     }
     return undefined;
