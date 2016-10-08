@@ -4,8 +4,8 @@ socket.on('connect', function (socket) {
     console.log('Connected to socket.io server');
 });
 
-socket.on('message', function (message) {
-    $('.messages').append('<p>' + message.text + '</p>')
+socket.on('message', function (message, timeSent) {
+    $('.messages').append('<p>' + '<strong>' + timeSent + '</strong>' + ': ' + message.text + '</p>')
 });
 
 var $form = jQuery('#message-form');
