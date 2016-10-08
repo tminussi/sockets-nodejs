@@ -5,15 +5,16 @@
     <title>Chat App</title>
 </head>
 <body>
+<div class="messages">
+</div>
 <div class="row">
-    <form class="col s12" action="/chat.html">
+    <a href="index.html">Change settings</a>
+    <form class="cols12" name="message-form" id="message-form">
         <div class="row">
             <div class="input-field col s6">
-                <input placeholder="nickname" name="name" id="name" type="text" class="validate">
-                <label for="name">Nickname</label>
-                <button class="btn waves-effect waves-light col s12" type="submit">Join Chat<i
-                        class="material-icons right">send</i>
-                </button>
+                <input type="text" placeholder="type your message here" class="validate" id="message" name="message" />
+                <label for="message">Message</label>
+                <button class="btn waves-effect waves-light" type="submit">Send message<i class="material-icons right">send</i></button>
             </div>
         </div>
     </form>
