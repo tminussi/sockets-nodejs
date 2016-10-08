@@ -5,20 +5,30 @@
     <title>Chat App</title>
 </head>
 <body>
-<h2 class="room-title"></h2>
-<div class="messages">
-</div>
 <div class="row">
-    <a href="index.html">Change settings</a>
-    <form class="cols12" name="message-form" id="message-form">
-        <div class="row">
-            <div class="input-field col s6">
-                <input type="text" placeholder="type your message here" class="validate" id="message" name="message" />
-                <label for="message">Message</label>
-                <button class="btn waves-effect waves-light" type="submit">Send message<i class="material-icons right">send</i></button>
+    <div class="col s12 m6 offset-m3">
+        <div class="card-panel teal darken-4">
+            <div class="messages white-text"></div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="row form-wrapper">
+    <form class="col s12 m6 offset-m3 card-panel teal" name="message-form" id="message-form">
+        <h2 class="room-title card-panel teal white-text darken-3"></h2>
+        <div class="card-panel teal darken-2">
+            <div class="card-content white-text center-align">
+                <input type="text" placeholder="Say something..." class="validate" id="message"
+                       name="message"/>
+                <button class="btn waves-effect waves-light" type="submit">Send message<i
+                        class="material-icons right">send</i></button>
             </div>
         </div>
+        <a class="btn waves-effect waves-light red right" href="index.html"><i class="large material-icons">power_settings_new</i>
+        </a>
     </form>
+
 </div>
 <script src="jquery/jquery.min.js"></script>
 <script src="socket-io/socket.io.js"></script>
@@ -26,5 +36,6 @@
 <script src="js/app.js"></script>
 <link rel="stylesheet" href="materialize/css/materialize.min.css">
 <link rel="stylesheet" href="materialize/css/material-icons.css">
+<link rel="stylesheet" href="css/chat.css">
 </body>
 </html>
